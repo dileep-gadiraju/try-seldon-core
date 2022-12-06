@@ -125,6 +125,8 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server
 1) jupyer notebook
 2) open [server_examples.ipynb](./server_examples.ipynb)
 
+## Example Model Explanations with Seldon
+Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
 
 ## Known issue with K8S >= 1.25 : 
 1)  [https://github.com/SeldonIO/seldon-core/issues/4339](https://github.com/SeldonIO/seldon-core/issues/4339)
