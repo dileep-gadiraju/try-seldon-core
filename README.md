@@ -78,8 +78,7 @@ EOF
 ## [Seldon Deploy](https://deploy.seldon.io/_/downloads/en/v1.3/pdf/)
 
 
-## istioctl References
-[istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/)
+## [istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/)
 
 ## Useful cli commands to troubleshoot 
 1)  `kubectl get seldondeployments`
