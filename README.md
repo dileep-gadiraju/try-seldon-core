@@ -3,19 +3,26 @@
 ## References
 [Install Locally](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html)
 
+[Notebooks](https://docs.seldon.io/projects/seldon-core/en/latest/examples/notebooks.html)
+
 [Seldon Core](https://docs.seldon.io/projects/seldon-core/en/latest/index.html)
 
 [Seldon Core Setup](https://docs.seldon.io/projects/seldon-core/en/latest/examples/seldon_core_setup.html)
 
 ## Setup Seldon Core locally
-1)  `kind delete cluster --name seldon`
-2) Note: K8S >=1.25 has HPA issues. So creating cluster with  kindest/node:v1.24.7 image.
-   
+1) jupyter notebook
+2) open [setup_seldon_core_using_kind.ipynb](./setup_seldon_core_using_kind.ipynb) and execute all the cells.
+<!-- 3) `pip install seldon-core`
+4) `pip install mlflow`
+5)  `kind delete cluster --name seldon`
+6) Note: K8S >=1.25 has HPA(HorizontalPodAutoscaler) issues. So creating cluster with  kindest/node:v1.24.7 image.
    `kind create cluster --name seldon --image kindest/node:v1.24.7`
-3)  `kubectl cluster-info --context kind-seldon`
-4)  `istioctl install --set profile=default -y`
-5)  `kubectl label namespace default istio-injection=enabled`
-6)  Follow instructions [Create Istio Gateway](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html) , [install-seldon-core](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#install-seldon-core) , [local-port-forwarding](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#local-port-forwarding)
+   For apiextensions.k8s.io/v1beta1 CRD issue , use `kind create cluster --name seldon --image=kindest/node:v1.21.2`
+   Refer: https://stackoverflow.com/questions/69054622/unable-to-install-crds-in-kubernetes-kind
+7)  `kubectl cluster-info --context kind-seldon`
+8)  `istioctl install --set profile=default -y`
+9)  `kubectl label namespace default istio-injection=enabled`
+10) Follow instructions [Create Istio Gateway](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html) , [install-seldon-core](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#install-seldon-core) , [local-port-forwarding](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#local-port-forwarding) -->
 
 <!-- 11) Istio : Plugin certificates and key into cluster
     1) follow below steps to plugin certs for istio
@@ -123,6 +130,14 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server_examples.html
 1) jupyer notebook
 2) open [server_examples.ipynb](./server_examples.ipynb)
+
+## MLFlow Pre-packaged Model Server AB Test Deployment
+1) jupyer notebook
+2) open [mlflow_server_ab_test_ambassador.ipynb](./mlflow_server_ab_test_ambassador.ipynb)
+
+## Triton Examples
+1) jupyer notebook
+2) open [triton_examples.ipynb](./triton_examples.ipynb)
 
 ## Example Model Explanations with Seldon
 Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
