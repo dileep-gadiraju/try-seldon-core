@@ -126,9 +126,9 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server
 
 
 ### Known issue with K8S >= 1.25 : 
-    https://github.com/SeldonIO/seldon-core/issues/4339
-    https://github.com/SeldonIO/seldon-core/issues/2485
+1)  [https://github.com/SeldonIO/seldon-core/issues/4339](https://github.com/SeldonIO/seldon-core/issues/4339)
+2)  [https://github.com/SeldonIO/seldon-core/issues/2485](https://github.com/SeldonIO/seldon-core/issues/2485)
 
 ### Known issues with Istio configuration
-       1) https://github.com/kserve/kserve/issues/1005
-       2) https://stackoverflow.com/questions/69826714/fail-to-run-istio-ingressgateway-got-readiness-probe-failed-connection-refused
+1) [https://github.com/kserve/kserve/issues/1005](https://github.com/kserve/kserve/issues/1005)
+2) [https://stackoverflow.com/questions/69826714/fail-to-run-istio-ingressgateway-got-readiness-probe-failed-connection-refused](https://stackoverflow.com/questions/69826714/fail-to-run-istio-ingressgateway-got-readiness-probe-failed-connection-refused)
