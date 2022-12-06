@@ -118,12 +118,12 @@ EOF
 ## Example Seldon Core Deployments using Helm with Istio
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_examples.html 
 1) jupyer notebook
-2) open istio_example.ipynb
+2) open [istio_example.ipynb](./istio_example.ipynb)
 
 ## Example Model Servers with Seldon
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server_examples.html
 1) jupyer notebook
-2) open server_examples.ipynb
+2) open [server_examples.ipynb](./server_examples.ipynb)
 
 
 ## Known issue with K8S >= 1.25 : 
