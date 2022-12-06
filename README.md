@@ -1,4 +1,5 @@
-# Try Seldon Core - A repo to bring up Seldon core locally with references to known issues
+# Try Seldon Core 
+#### A repo to bring up Seldon core locally with minimal effort. This repo also lists the know issues and work around references.
 
 ## References
 [Install Locally](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html)
