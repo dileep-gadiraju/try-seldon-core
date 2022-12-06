@@ -7,6 +7,8 @@ https://docs.seldon.io/projects/seldon-core/en/latest/examples/seldon_core_setup
 2)  kind create cluster --name seldon --image kindest/node:v1.24.7
 3)  kubectl cluster-info --context kind-seldon
 4)  Install ISTIO as per instructions in below link
+    istioctl install --set profile=default -y
+    istioctl install --set profile=minimal -y
     istioctl install --set profile=demo -y  
 5)  kubectl label namespace default istio-injection=enabled
 6)  kubectl apply -f - << END
@@ -79,7 +81,10 @@ EOF
     References:
     https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports
     https://kind.sigs.k8s.io/docs/user/loadbalancer/
-14) 
+14) Ensure the istio ingress gatewaty is port-forwarded to localhost:8004
+    kubectl port-forward $(kubectl get pods -l istio=ingressgateway -n istio-system -o jsonpath='{.items[0].metadata.name}') -n istio-system 8004:8080
+    References: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_examples.html
+15) 
     
 
 
@@ -141,6 +146,9 @@ kubectl get pods -n=istio-system
 kubectl logs pods/<pod name> -n=istio-system
 istioctl profile dump demo
 kubectl logs <pod name/container id>
+kubectl get gateway -n istio-system
+kubectl describe gateway/seldon-gateway -n istio-system
+kubectl get gateway --all-namespaces
 
 # Notebooks with examples
 https://docs.seldon.io/projects/seldon-core/en/latest/examples/server_examples.html
@@ -150,14 +158,25 @@ https://docs.seldon.io/projects/seldon-core/en/latest/workflow/github-readme.htm
     https://github.com/SeldonIO/seldon-core/issues/4339
     https://github.com/SeldonIO/seldon-core/issues/2485
 
-1)  Serve SKLearn Iris Model
+1)  Try : https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_examples.html
+2)  Serve SKLearn Iris Model
     kubectl delete  -f ./servers/sklearnserver/samples/iris.yaml
     kubectl apply  -f ./servers/sklearnserver/samples/iris.yaml
     kubectl scale --replicas=1 -f ./servers/sklearnserver/samples/iris.yaml
     kubectl rollout status deploy/$(kubectl get deploy -l seldon-deployment-id=sklearn -o jsonpath='{.items[0].metadata.name}')
     kubectl describe seldondeployments sklearn
 
-2)  Serve SKLearn Iris Model with v2 protocol
+3)  Serve SKLearn Iris Model with v2 protocol
     kubectl apply  -f ./servers/sklearnserver/samples/iris-sklearn-v2.yaml
     kubectl rollout status deploy/$(kubectl get deploy -l seldon-deployment-id=sklearn-v2 -o jsonpath='{.items[0].metadata.name}')
-3)  
+
+
+# Example Seldon Core Deployments using Helm with Istio
+Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_examples.html 
+1) jupyer notebook
+2) open istio_example.ipynb
+
+# Example Model Servers with Seldon
+Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server_examples.html
+1) jupyer notebook
+2) open server_examples.ipynb
