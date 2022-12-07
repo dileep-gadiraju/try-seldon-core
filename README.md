@@ -90,15 +90,15 @@ EOF
 
 ## Useful admin and troubleshooting cli commands
 1)  `kubectl get seldondeployments`
-2)  `kubectl describe seldondeployments sklearn`
-3)  `kubectl describe svc sklearn`
+2)  `kubectl describe seldondeployments <seldondeployment name>`
+3)  `kubectl describe svc <svc name>`
 4)  `kubectl get namespaces`
 5)  `kubectl get all -n istio-system`
 6)  `kubectl get svc -n istio-system`
 7)  `kubectl describe namespace default`
 8)  `kubectl describe namespace istio-system`
 9)  `kubectl get pods`
-10) `kubectl describe pod sklearn-default-0-classifier-6497d676b7-wc28g`
+10) `kubectl describe pod <pod name>`
 11) `which istioctl`
 12) `istioctl version`
 13) `istioctl proxy-status`
