@@ -1,5 +1,5 @@
 # Try Seldon Core 
-#### A repo to bring up Seldon core locally with minimal effort. This repo also lists the know issues and work around references.
+#### Repository to bring up [Seldon core](https://www.seldon.io/solutions/open-source-projects/core) locally with minimal effort. This repo also lists the know issues and work around/fixes needed for installation, run Seldon Core out of the box sample notebooks  with ease.
 
 ## References
 [Install Locally](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html)
@@ -11,19 +11,19 @@
 [Seldon Core Setup](https://docs.seldon.io/projects/seldon-core/en/latest/examples/seldon_core_setup.html)
 
 ## Setup Seldon Core locally
-1) jupyter notebook
-2) open [setup_seldon_core_using_kind.ipynb](./setup_seldon_core_using_kind.ipynb) and execute all the cells.
+[Setup Seldon Core with Kind](./setup_seldon_core_using_kind.ipynb)
+
 <!-- 3) `pip install seldon-core`
-4) `pip install mlflow`
-5)  `kind delete cluster --name seldon`
-6) Note: K8S >=1.25 has HPA(HorizontalPodAutoscaler) issues. So creating cluster with  kindest/node:v1.24.7 image.
+1) `pip install mlflow`
+2)  `kind delete cluster --name seldon`
+3) Note: K8S >=1.25 has HPA(HorizontalPodAutoscaler) issues. So creating cluster with  kindest/node:v1.24.7 image.
    `kind create cluster --name seldon --image kindest/node:v1.24.7`
    For apiextensions.k8s.io/v1beta1 CRD issue , use `kind create cluster --name seldon --image=kindest/node:v1.21.2`
    Refer: https://stackoverflow.com/questions/69054622/unable-to-install-crds-in-kubernetes-kind
-7)  `kubectl cluster-info --context kind-seldon`
-8)  `istioctl install --set profile=default -y`
-9)  `kubectl label namespace default istio-injection=enabled`
-10) Follow instructions [Create Istio Gateway](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html) , [install-seldon-core](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#install-seldon-core) , [local-port-forwarding](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#local-port-forwarding) -->
+4)  `kubectl cluster-info --context kind-seldon`
+5)  `istioctl install --set profile=default -y`
+6)  `kubectl label namespace default istio-injection=enabled`
+7)  Follow instructions [Create Istio Gateway](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html) , [install-seldon-core](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#install-seldon-core) , [local-port-forwarding](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#local-port-forwarding) -->
 
 <!-- 11) Istio : Plugin certificates and key into cluster
     1) follow below steps to plugin certs for istio
@@ -88,7 +88,7 @@ EOF
 
 ## [istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/)
 
-## Useful cli commands to troubleshoot 
+## Useful admin and troubleshooting cli commands
 1)  `kubectl get seldondeployments`
 2)  `kubectl describe seldondeployments sklearn`
 3)  `kubectl describe svc sklearn`
@@ -120,6 +120,7 @@ EOF
 29) `kubectl get gateway -n istio-system`
 30) `kubectl describe gateway/seldon-gateway -n istio-system`
 31) `kubectl get gateway --all-namespaces`
+32) `kubectl delete all --all`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
