@@ -80,11 +80,9 @@ EOF
 
 ## [Setup MINIO](https://docs.seldon.io/projects/seldon-core/en/latest/examples/minio_setup.html)
 
-## Kubernetes-based Event Driven Autoscaler(KEDA) Setup
-[Scale Seldon Deployments based on Prometheus Metrics](https://docs.seldon.io/projects/seldon-core/en/latest/examples/keda.html)
+## [Kubernetes-based Event Driven Autoscaler(KEDA) Setup](https://docs.seldon.io/projects/seldon-core/en/latest/examples/keda.html)
 
 ## [Seldon Deploy](https://deploy.seldon.io/_/downloads/en/v1.3/pdf/)
-
 
 ## [istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/)
 
@@ -125,24 +123,22 @@ EOF
 
 ## Example Seldon Core Deployments using Helm with Istio
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_examples.html 
-1) jupyer notebook
-2) open [istio_example.ipynb](./istio_example.ipynb)
+1) open [istio_example.ipynb](./istio_example.ipynb)
 
 ## Example Model Servers with Seldon
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server_examples.html
-1) jupyer notebook
-2) open [server_examples.ipynb](./server_examples.ipynb)
+1) open [server_examples.ipynb](./server_examples.ipynb)
 
 ## MLFlow Pre-packaged Model Server AB Test Deployment
-1) jupyer notebook
-2) open [mlflow_server_ab_test_ambassador.ipynb](./mlflow_server_ab_test_ambassador.ipynb)
+1) open [mlflow_server_ab_test_ambassador.ipynb](./mlflow_server_ab_test_ambassador.ipynb)
 
 ## Triton Examples
-1) jupyer notebook
-2) open [triton_examples.ipynb](./triton_examples.ipynb)
+1) open [triton_examples.ipynb](./triton_examples.ipynb)
+2) git clone https://github.com/azure/azureml-examples
 
 ## Example Model Explanations with Seldon
 Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
+1)  open [explainer_examples.ipynb](./explainer_examples.ipynb)
 
 ## Known issue with K8S >= 1.25 : 
 1)  [https://github.com/SeldonIO/seldon-core/issues/4339](https://github.com/SeldonIO/seldon-core/issues/4339)
