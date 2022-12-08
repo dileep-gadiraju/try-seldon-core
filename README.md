@@ -103,22 +103,25 @@ EOF
 14) `istioctl proxy-config cluster <pod name>`
 15) `istioctl install --set profile=default -y`
 16) `istioctl install --set profile=demo -y`
-17) `kubectl describe service/istio-ingressgateway -n istio-system`
-18) `kubectl get svc istio-ingressgateway -n istio-system -oyaml`
-19) `kubectl get ksvc,configuration,revision,route`
-20) `kubectl get ingress`
-21) `kubectl describe pod <pod name> -n seldon-system`
-22) `kubectl describe svc sklearn-default`
-23) `kubectl get svc istio-ingressgateway -n istio-system`
-24) `kubectl describe svc istio-ingressgateway -n istio-system`
-25) `kubectl get pods -n=istio-system`
-26) `kubectl logs pods/<pod name> -n=istio-system`
-27) `istioctl profile dump demo`
-28) `kubectl logs <pod name/container id>`
-29) `kubectl get gateway -n istio-system`
-30) `kubectl describe gateway/seldon-gateway -n istio-system`
-31) `kubectl get gateway --all-namespaces`
-32) `kubectl delete all --all`
+17) `istioctl analyze`
+18) `kubectl describe service/istio-ingressgateway -n istio-system`
+19) `kubectl get svc istio-ingressgateway -n istio-system -oyaml`
+20) `kubectl get ksvc,configuration,revision,route`
+21) `kubectl get ingress`
+22) `kubectl describe pod <pod name> -n seldon-system`
+23) `kubectl describe svc sklearn-default`
+24) `kubectl get svc istio-ingressgateway -n istio-system`
+25) `kubectl describe svc istio-ingressgateway -n istio-system`
+26) `kubectl get pods -n=istio-system`
+27) `kubectl logs pods/<pod name> -n=istio-system`
+28) `istioctl profile dump demo`
+29) `kubectl logs <pod name/container id>`
+30) `kubectl get gateway -n istio-system`
+31) `kubectl describe gateway/seldon-gateway -n istio-system`
+32) `kubectl get gateway --all-namespaces`
+33) `kubectl delete all --all`
+34) Label a K8s namespace for istio injection `kubectl label namespace seldon istio-injection=enabled`
+35) 
 
 
 ## Example Seldon Core Deployments using Helm with Istio
