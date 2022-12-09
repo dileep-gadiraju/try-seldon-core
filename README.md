@@ -143,6 +143,11 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server
 Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
 1)  open [explainer_examples.ipynb](./explainer_examples.ipynb)
 
+## Custom model packaging and deployment
+Reference: https://docs.seldon.io/projects/seldon-core/en/latest/python/index.html
+https://docs.primehub.io/docs/model-deployment-language-wrapper-python#pytorch
+1) 
+
 ## Known issue with K8S >= 1.25 : 
 1)  [https://github.com/SeldonIO/seldon-core/issues/4339](https://github.com/SeldonIO/seldon-core/issues/4339)
 2)  [https://github.com/SeldonIO/seldon-core/issues/2485](https://github.com/SeldonIO/seldon-core/issues/2485)
