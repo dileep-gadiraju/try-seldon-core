@@ -143,6 +143,9 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server
 Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
 1)  open [explainer_examples.ipynb](./explainer_examples.ipynb)
 
+## Example IRIS Model loaded from MINIO
+1) [iris_deploy_with_minio.ipynb](./iris_deploy_with_minio.ipynb)
+
 ## [Custom model packaging and deployment](./custom-models/mnist_cnn_pt/README.md)
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/python/index.html
 https://docs.primehub.io/docs/model-deployment-language-wrapper-python#pytorch
