@@ -114,14 +114,15 @@ EOF
 25) `kubectl describe svc istio-ingressgateway -n istio-system`
 26) `kubectl get pods -n=istio-system`
 27) `kubectl logs pods/<pod name> -n=istio-system`
-28) `istioctl profile dump demo`
-29) `kubectl logs <pod name/container id>`
-30) `kubectl get gateway -n istio-system`
-31) `kubectl describe gateway/seldon-gateway -n istio-system`
-32) `kubectl get gateway --all-namespaces`
-33) `kubectl delete all --all`
-34) Label a K8s namespace for istio injection `kubectl label namespace seldon istio-injection=enabled`
-35) 
+28) `kubectl logs pod/<pod name> --tail=100`
+29) `istioctl profile dump demo`
+30) `kubectl logs <pod name/container id>`
+31) `kubectl get gateway -n istio-system`
+32) `kubectl describe gateway/seldon-gateway -n istio-system`
+33) `kubectl get gateway --all-namespaces`
+34) `kubectl delete all --all`
+35) Label a K8s namespace for istio injection `kubectl label namespace seldon istio-injection=enabled`
+36) Shows resources available in each node.`kubectl describe nodes`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
