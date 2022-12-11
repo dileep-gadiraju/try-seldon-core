@@ -123,6 +123,8 @@ EOF
 34) `kubectl delete all --all`
 35) Label a K8s namespace for istio injection `kubectl label namespace seldon istio-injection=enabled`
 36) Shows resources available in each node.`kubectl describe nodes`
+37) Load docker image to kind cluster/control plane `kind load docker-image nvcr.io/nvidia/tritonserver:21.08-py3 --name kind`
+38) `docker exec kind-control-plane crictl images`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
