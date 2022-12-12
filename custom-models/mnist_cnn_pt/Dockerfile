@@ -5,8 +5,8 @@ RUN pip install -r requirements.txt
 EXPOSE 9001
 
 # Define environment variable
-# ENV MODEL_NAME MyModel
-ENV MODEL_NAME MNISTModel
+ENV MODEL_NAME MyModel
+# ENV MODEL_NAME MNISTModel
 ENV SERVICE_TYPE MODEL
 ENV PERSISTENCE 0
 

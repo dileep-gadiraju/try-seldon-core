@@ -2,4 +2,4 @@ seldon-core
 keras
 # tensorflow
 numpy
-torch
+# torch

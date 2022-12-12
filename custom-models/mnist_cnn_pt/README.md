@@ -3,7 +3,7 @@
 Temp Reference: https://docs.primehub.io/docs/model-deployment-language-wrapper-python#pytorch
 #### Setup MINIO
 1) [MINIO Setup](../../minio_setup.ipynb)
-#### Style 1 : Package as Docker image with seldon-core-microservice
+#### Style 1 : Language Wrapper logic to wrap Python Models - Package as Docker image with seldon-core-microservice
 1) Build Image
    
     `docker build . -t mnist-cnn-pt:latest`
@@ -16,6 +16,4 @@ Temp Reference: https://docs.primehub.io/docs/model-deployment-language-wrapper-
     -H 'Content-Type: application/json' \
     -d '{ "data": { "ndarray": [[5.964,4.006,2.081,1.031]]}}'`
 
-3) 
 
-#### Style 2 : Deploy using SeldonDeploy CRD yaml
