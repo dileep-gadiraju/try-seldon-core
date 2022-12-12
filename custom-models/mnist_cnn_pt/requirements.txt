@@ -1,4 +1,5 @@
 seldon-core
 keras
-tensorflow
+# tensorflow
 numpy
+torch
