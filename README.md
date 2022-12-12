@@ -138,6 +138,10 @@ EOF
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_examples.html 
 1) open [istio_example.ipynb](./istio_example.ipynb)
 
+## Auto scaling
+Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/autoscaling_example.html
+1) [Auto Scaling Examples](./autoscaling_example.ipynb)
+
 ## Example Model Servers with Seldon
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server_examples.html
 1) open [server_examples.ipynb](./server_examples.ipynb)
