@@ -142,16 +142,19 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server
 1) open [triton_examples.ipynb](./triton_examples.ipynb)
 2) git clone https://github.com/azure/azureml-examples
 
-## Example Model Explanations with Seldon
-Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
-1)  open [explainer_examples.ipynb](./explainer_examples.ipynb)
-
 ## Example IRIS Model loaded from MINIO
 1) [iris_deploy_with_minio.ipynb](./iris_deploy_with_minio.ipynb)
 
-## [Custom model packaging and deployment](./custom-models/mnist_cnn_pt/README.md)
+## Custom model packaging and deployment
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/python/index.html
 https://docs.primehub.io/docs/model-deployment-language-wrapper-python#pytorch
+1)  [Pytorch model deployment with Triton Inference Server](./triton_deploy_custom_model.ipynb)
+2)  [Custom Model deployment with Language Wrapper](./custom-models/mnist_cnn_pt/README.md)
+
+
+## Example Model Explanations with Seldon
+Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
+1)  open [explainer_examples.ipynb](./explainer_examples.ipynb)
 
 ## Known issue with K8S >= 1.25 : 
 1)  [https://github.com/SeldonIO/seldon-core/issues/4339](https://github.com/SeldonIO/seldon-core/issues/4339)
