@@ -13,6 +13,12 @@
 ## Setup Seldon Core locally
 [Setup Seldon Core with Kind](./setup_seldon_core_using_kind.ipynb)
 
+## Prerequisites
+1) [Docker](https://www.docker.com/)
+2) [Kind K8S](https://kind.sigs.k8s.io/docs/user/quick-start/)
+3) [grpcurl for gRPC: Command-line tool for interacting with gRPC servers](https://github.com/fullstorydev/grpcurl)
+4) [MINIO - High performance Object Storage](https://min.io/) - [MINIO Setup locally](./minio_setup.ipynb)
+
 <!-- 3) `pip install seldon-core`
 1) `pip install mlflow`
 2)  `kind delete cluster --name seldon`
@@ -125,6 +131,7 @@ EOF
 36) Shows resources available in each node.`kubectl describe nodes`
 37) Load docker image to kind cluster/control plane `kind load docker-image nvcr.io/nvidia/tritonserver:21.08-py3 --name kind`
 38) `docker exec kind-control-plane crictl images`
+39) Scale Seldon deployment `!kubectl scale --replicas=4 sdep/<seldon deployment id>`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
