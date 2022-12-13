@@ -147,8 +147,9 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/autosc
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server_examples.html
 1) open [server_examples.ipynb](./server_examples.ipynb)
 
-## MLFlow Pre-packaged Model Server AB Test Deployment
-1) open [mlflow_server_ab_test_ambassador.ipynb](./mlflow_server_ab_test_ambassador.ipynb)
+## Metrics Server
+Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/feedback_reward_custom_metrics.htm 
+1) [Metrics Server Notebook](./metrics-server.ipynb)
 
 ## Triton Examples
 1) open [triton_examples.ipynb](./triton_examples.ipynb)
@@ -170,6 +171,9 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_
 ## Example Model Explanations with Seldon
 Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
 1)  open [explainer_examples.ipynb](./explainer_examples.ipynb)
+
+## MLFlow Pre-packaged Model Server AB Test Deployment
+1) open [mlflow_server_ab_test_ambassador.ipynb](./mlflow_server_ab_test_ambassador.ipynb)
 
 ## Known issue with K8S >= 1.25 : 
 1)  [https://github.com/SeldonIO/seldon-core/issues/4339](https://github.com/SeldonIO/seldon-core/issues/4339)
