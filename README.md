@@ -16,8 +16,9 @@
 ## Prerequisites
 1) [Docker](https://www.docker.com/)
 2) [Kind K8S](https://kind.sigs.k8s.io/docs/user/quick-start/)
-3) [grpcurl for gRPC: Command-line tool for interacting with gRPC servers](https://github.com/fullstorydev/grpcurl)
-4) [MINIO - High performance Object Storage](https://min.io/) - [MINIO Setup locally](./minio_setup.ipynb)
+3) [Kubectl](https://kubernetes.io/docs/tasks/tools/)
+4) [grpcurl for gRPC: Command-line tool for interacting with gRPC servers](https://github.com/fullstorydev/grpcurl)
+5) [MINIO - High performance Object Storage](https://min.io/) - [MINIO Setup locally](./minio_setup.ipynb)
 
 <!-- 3) `pip install seldon-core`
 1) `pip install mlflow`
@@ -162,6 +163,9 @@ https://docs.primehub.io/docs/model-deployment-language-wrapper-python#pytorch
 1)  [Pytorch model deployment with Triton Inference Server](./triton_deploy_custom_model.ipynb)
 2)  [Custom Model deployment with Language Wrapper](./custom-models/mnist_cnn_pt/README.md)
 
+## Canary Deployments with Istio
+Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_canary.html
+1) [Canary Deployments with istio Notebook](./istio_canary.ipynb)
 
 ## Example Model Explanations with Seldon
 Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
