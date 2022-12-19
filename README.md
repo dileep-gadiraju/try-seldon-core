@@ -133,6 +133,11 @@ EOF
 37) Load docker image to kind cluster/control plane `kind load docker-image nvcr.io/nvidia/tritonserver:21.08-py3 --name kind`
 38) `docker exec kind-control-plane crictl images`
 39) Scale Seldon deployment `!kubectl scale --replicas=4 sdep/<seldon deployment id>`
+40) Open interactive shell to kind cluster `docker exec -it kind-control-plane bash`
+41) list nodes on kind cluster `kind get nodes`
+42) To get details about K8s nodes `kubectl describe nodes`
+43) `kubectl cluster-info dump`
+44) Get pod names with seldon deployment-id=model-server-triton `kubectl get pods -l seldon-deployment-id=model-server-triton  -o custom-columns=:metadata.name`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
@@ -151,6 +156,10 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/feedback_reward_custom_metrics.htm 
 1) [Metrics Server Notebook](./metrics-server.ipynb)
 
+## Metrics with Prometheus Operator
+Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/metrics.html
+1) [Metrics with prometheus Notebook](./metrics_prometheus.ipynb)
+
 ## Triton Examples
 1) open [triton_examples.ipynb](./triton_examples.ipynb)
 2) git clone https://github.com/azure/azureml-examples
@@ -167,6 +176,9 @@ https://docs.primehub.io/docs/model-deployment-language-wrapper-python#pytorch
 ## Canary Deployments with Istio
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_canary.html
 1) [Canary Deployments with istio Notebook](./istio_canary.ipynb)
+
+## Triton Model Server with MINIO Model Repository
+1) [Triton Model server with MINIO repository](./triton_minio_model_store.ipynb)
 
 ## Example Model Explanations with Seldon
 Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
