@@ -138,6 +138,10 @@ EOF
 42) To get details about K8s nodes `kubectl describe nodes`
 43) `kubectl cluster-info dump`
 44) Get pod names with seldon deployment-id=model-server-triton `kubectl get pods -l seldon-deployment-id=model-server-triton  -o custom-columns=:metadata.name`
+45) Get all K8S objects in seldon namespace `kubectl get all -n seldon`
+46) Get Kafka with strimzi operator `kubectl get Kafka`
+47) Istio port forwarding `kubectl port-forward $(kubectl get pods -l istio=ingressgateway -n istio-system -o jsonpath='{.items[0].metadata.name}') -n istio-system 8004:8080`
+48) Minio port forwarding `export POD_NAME=$(kubectl get pods --namespace minio-system -l "release=minio" -o jsonpath="{.items[0].metadata.name}")  && kubectl port-forward $POD_NAME 9000`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
