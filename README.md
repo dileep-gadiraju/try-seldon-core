@@ -142,6 +142,7 @@ EOF
 46) Get Kafka with strimzi operator `kubectl get Kafka`
 47) Istio port forwarding `kubectl port-forward $(kubectl get pods -l istio=ingressgateway -n istio-system -o jsonpath='{.items[0].metadata.name}') -n istio-system 8004:8080`
 48) Minio port forwarding `export POD_NAME=$(kubectl get pods --namespace minio-system -l "release=minio" -o jsonpath="{.items[0].metadata.name}")  && kubectl port-forward $POD_NAME 9000`
+49) K8S component statuses `kubectl get componentstatuses`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
