@@ -149,6 +149,8 @@ EOF
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_examples.html 
 1) open [istio_example.ipynb](./istio_example.ipynb)
 
+## Scaling Seldon Deployments
+1) [Scale Seldon Deployments Notebook](./scale_examples.ipynb)
 ## Auto scaling
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/autoscaling_example.html
 1) [Auto Scaling Examples](./autoscaling_example.ipynb)
