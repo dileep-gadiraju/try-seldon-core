@@ -1,0 +1,7 @@
+sklearn
+scikit-learn
+seldon-core
+protobuf==3.20
+grpcio
+grpcio-tools
+joblib
