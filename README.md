@@ -146,8 +146,9 @@ EOF
 45) Get all K8S objects in seldon namespace `kubectl get all -n seldon`
 46) Get Kafka with strimzi operator `kubectl get Kafka`
 47) Istio port forwarding `kubectl port-forward $(kubectl get pods -l istio=ingressgateway -n istio-system -o jsonpath='{.items[0].metadata.name}') -n istio-system 8004:8080`
-48) Minio port forwarding `export POD_NAME=$(kubectl get pods --namespace minio-system -l "release=minio" -o jsonpath="{.items[0].metadata.name}")  && kubectl port-forward $POD_NAME 9000`
+48) Minio port forwarding `export POD_NAME=$(kubectl get pods --namespace minio-system -l "release=minio" -o jsonpath="{.items[0].metadata.name}")  && kubectl port-forward $POD_NAME 9000 -n minio-system`
 49) K8S component statuses `kubectl get componentstatuses`
+50) delete deployment `kubectl delete deploy <deployment name> -n <namespace>`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
@@ -164,9 +165,6 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/autosc
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server_examples.html
 1) open [server_examples.ipynb](./server_examples.ipynb)
 
-## Metrics Server
-Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/feedback_reward_custom_metrics.htm 
-1) [Metrics Server Notebook](./metrics-server.ipynb)
 
 ## Metrics with Prometheus Operator
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/metrics.html
@@ -191,6 +189,13 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_
 
 ## Triton Model Server with MINIO Model Repository
 1) [Triton Model server with MINIO repository](./triton_minio_model_store.ipynb)
+
+
+## Metrics Server
+Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/feedback_reward_custom_metrics.htm 
+1) [Metrics Server Notebook](./metrics-server.ipynb)
+  
+##[Batch processing with Kubeflow Pipelines](https://docs.seldon.io/projects/seldon-core/en/latest/examples/kubeflow_pipelines_batch.html)
 
 ## Example Model Explanations with Seldon
 Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
