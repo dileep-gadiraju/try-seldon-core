@@ -191,9 +191,12 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_
 ## Triton Model Server with MINIO Model Repository
 1) [Triton Model server with MINIO repository](./triton_minio_model_store.ipynb)
 
+## Seldon Kafka Integration with KEDA scaling over SSL
+1) [Notebook](./cifar10_kafka.ipynb)
 
 ## Metrics Server
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/feedback_reward_custom_metrics.htm 
+           https://docs.seldon.io/projects/seldon-core/en/latest/analytics/analytics.html
 1) [Metrics Server Notebook](./metrics-server.ipynb)
   
 ##[Batch processing with Kubeflow Pipelines](https://docs.seldon.io/projects/seldon-core/en/latest/examples/kubeflow_pipelines_batch.html)
