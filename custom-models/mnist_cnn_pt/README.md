@@ -10,10 +10,13 @@ Temp Reference: https://docs.primehub.io/docs/model-deployment-language-wrapper-
 
 2) Test the Image
     
-    `docker run -p 9001:9001 --rm mnist-cnn-pt:latest`
+    `docker run -p 9001:9001 -p 5001:5001 --rm mnist-cnn-pt:latest`
 
+    #### REST API Test
+    
     `curl -X POST http://localhost:9001/api/v1.0/predictions \
     -H 'Content-Type: application/json' \
     -d '{ "data": { "ndarray": [[5.964,4.006,2.081,1.031]]}}'`
 
-
+    #### GRPC Test
+    

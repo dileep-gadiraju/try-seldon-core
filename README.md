@@ -149,7 +149,8 @@ EOF
 48) Minio port forwarding `export POD_NAME=$(kubectl get pods --namespace minio-system -l "release=minio" -o jsonpath="{.items[0].metadata.name}")  && kubectl port-forward $POD_NAME 9000 -n minio-system`
 49) K8S component statuses `kubectl get componentstatuses`
 50) delete deployment `kubectl delete deploy <deployment name> -n <namespace>`
-51) scale `kubectl scale --replicas=0 replicaset.apps/<replicaset name>`
+51) scale down `kubectl scale --replicas=0 replicaset.apps/<replicaset name>`
+52) Remove docker <none> images `docker rmi $(docker images -f "dangling=true" -q)`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
