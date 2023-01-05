@@ -17,7 +17,7 @@
 4) [grpcurl for gRPC: Command-line tool for interacting with gRPC servers](https://github.com/fullstorydev/grpcurl)
 5) [MINIO - High performance Object Storage](https://min.io/) - [MINIO Setup locally](./minio_setup.ipynb)
 6) [Helm](https://helm.sh/docs/intro/install/)
-7) 
+7) `!git clone --branch 1.15.0-dev https://github.com/SeldonIO/seldon-core`
 
 ## Setup Seldon Core locally
 [Setup Seldon Core with Kind](./setup_seldon_core_using_kind.ipynb)
@@ -139,8 +139,8 @@ EOF
 38) `docker exec kind-control-plane crictl images`
 39) Scale Seldon deployment `!kubectl scale --replicas=4 sdep/<seldon deployment id>`
 40) Open interactive shell to kind cluster `docker exec -it kind-control-plane bash`
-41) list nodes on kind cluster `kind get nodes`
-42) To get details about K8s nodes `kubectl describe nodes`
+41) list nodes/clusters/kubeconfig on kind cluster `kind get nodes`
+42) To get details about K8s nodes `kubectl describe clusters/nodes/kubeconfig`
 43) `kubectl cluster-info dump`
 44) Get pod names with seldon deployment-id=model-server-triton `kubectl get pods -l seldon-deployment-id=model-server-triton  -o custom-columns=:metadata.name`
 45) Get all K8S objects in seldon namespace `kubectl get all -n seldon`
@@ -151,6 +151,7 @@ EOF
 50) delete deployment `kubectl delete deploy <deployment name> -n <namespace>`
 51) scale down `kubectl scale --replicas=0 replicaset.apps/<replicaset name>`
 52) Remove docker <none> images `docker rmi $(docker images -f "dangling=true" -q)`
+53) Delete namespace `kubectl delete namespace/<namespace name>`
 
 
 ## Example Seldon Core Deployments using Helm with Istio
@@ -185,9 +186,13 @@ https://docs.primehub.io/docs/model-deployment-language-wrapper-python#pytorch
 1)  [Custom Model deployment with Language Wrapper](./sklearn_iris_customdata.ipynb)
 2)  [Pytorch model deployment with Triton Inference Server](./triton_deploy_custom_model.ipynb)
 
-## Canary Deployments with Istio
+
+
+## AB Tests and Progressive Rollouts
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_canary.html
 1) [Canary Deployments with istio Notebook](./istio_canary.ipynb)
+2) [Seldon/Iter8 - Progressive AB Test with Single Seldon Deployment](./istio_abtest.ipynb)
+3) [Seldon/Iter8 - Progressive AB Test with Multiple Seldon Deployments]()
 
 ## Triton Model Server with MINIO Model Repository
 1) [Triton Model server with MINIO repository](./triton_minio_model_store.ipynb)
