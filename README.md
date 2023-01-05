@@ -23,73 +23,6 @@
 [Setup Seldon Core with Kind](./setup_seldon_core_using_kind.ipynb)
 
 
-
-
-<!-- 3) `pip install seldon-core`
-1) `pip install mlflow`
-2)  `kind delete cluster --name seldon`
-3) Note: K8S >=1.25 has HPA(HorizontalPodAutoscaler) issues. So creating cluster with  kindest/node:v1.24.7 image.
-   `kind create cluster --name seldon --image kindest/node:v1.24.7`
-   For apiextensions.k8s.io/v1beta1 CRD issue , use `kind create cluster --name seldon --image=kindest/node:v1.21.2`
-   Refer: https://stackoverflow.com/questions/69054622/unable-to-install-crds-in-kubernetes-kind
-4)  `kubectl cluster-info --context kind-seldon`
-5)  `istioctl install --set profile=default -y`
-6)  `kubectl label namespace default istio-injection=enabled`
-7)  Follow instructions [Create Istio Gateway](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html) , [install-seldon-core](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#install-seldon-core) , [local-port-forwarding](https://docs.seldon.io/projects/seldon-core/en/latest/install/kind.html#local-port-forwarding) -->
-
-<!-- 11) Istio : Plugin certificates and key into cluster
-    1) follow below steps to plugin certs for istio
-     References: https://istio.io/latest/docs/tasks/security/cert-management/plugin-ca-cert/
-12) Istio: Create Ingress resource
-    ```
-kubectl apply -f - <<EOF
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  annotations:
-    kubernetes.io/ingress.class: istio
-  name: ingress
-spec:
-  rules:
-  - host: httpbin.example.com
-    http:
-      paths:
-      - path: /status
-        pathType: Prefix
-        backend:
-          service:
-            name: httpbin
-            port:
-              number: 8000
-EOF
-    ```
-1)  Istio Ingress setup:
-    kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.7/config/manifests/metallb-native.yaml
-    kubectl wait --namespace metallb-system \
-                --for=condition=ready pod \
-                --selector=app=metallb \
-                --timeout=90s
-    docker network inspect -f '{{.IPAM.Config}}' kind
-    export INGRESS_NAME=istio-ingressgateway
-    export INGRESS_NS=istio-system
-    kubectl get svc "$INGRESS_NAME" -n "$INGRESS_NS"
-    echo http://$INGRESS_HOST:$INGRESS_PORT/headers
-    export INGRESS_HOST=$(kubectl -n "$INGRESS_NS" get service "$INGRESS_NAME" -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
-    export INGRESS_PORT=$(kubectl -n "$INGRESS_NS" get service "$INGRESS_NAME" -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')
-    export SECURE_INGRESS_PORT=$(kubectl -n "$INGRESS_NS" get service "$INGRESS_NAME" -o jsonpath='{.spec.ports[?(@.name=="https")].port}')
-    export TCP_INGRESS_PORT=$(kubectl -n "$INGRESS_NS" get service "$INGRESS_NAME" -o jsonpath='{.spec.ports[?(@.name=="tcp")].port}')
-
-
-    References:
-    https://istio.io/latest/docs/tasks/traffic-management/ingress/ingress-control/#determining-the-ingress-ip-and-ports
-    https://kind.sigs.k8s.io/docs/user/loadbalancer/
-14) Ensure the istio ingress gatewaty is port-forwarded to localhost:8004
-    kubectl port-forward $(kubectl get pods -l istio=ingressgateway -n istio-system -o jsonpath='{.items[0].metadata.name}') -n istio-system 8004:8080
-    References: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_examples.html
-15)  -->
-    
-
-
 ## [Setup MINIO](https://docs.seldon.io/projects/seldon-core/en/latest/examples/minio_setup.html)
 
 ## [Kubernetes-based Event Driven Autoscaler(KEDA) Setup](https://docs.seldon.io/projects/seldon-core/en/latest/examples/keda.html)
@@ -186,8 +119,6 @@ https://docs.primehub.io/docs/model-deployment-language-wrapper-python#pytorch
 1)  [Custom Model deployment with Language Wrapper](./sklearn_iris_customdata.ipynb)
 2)  [Pytorch model deployment with Triton Inference Server](./triton_deploy_custom_model.ipynb)
 
-
-
 ## AB Tests and Progressive Rollouts
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_canary.html
 1) [Canary Deployments with istio Notebook](./istio_canary.ipynb)
@@ -196,6 +127,9 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_
 
 ## Triton Model Server with MINIO Model Repository
 1) [Triton Model server with MINIO repository](./triton_minio_model_store.ipynb)
+
+## Complex Graph Examples
+1) [graph-examples](./graph-examples.ipynb)
 
 ## Seldon Kafka Integration with KEDA scaling over SSL
 1) [Notebook](./cifar10_kafka.ipynb)
