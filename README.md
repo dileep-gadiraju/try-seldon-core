@@ -131,6 +131,9 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/istio_
 ## Complex Graph Examples
 1) [graph-examples](./graph-examples.ipynb)
 
+## Protocol Examples
+1) [protocol_examples](./protocol_examples.ipynb)
+
 ## Seldon Kafka Integration with KEDA scaling over SSL
 1) [Notebook](./cifar10_kafka.ipynb)
 
