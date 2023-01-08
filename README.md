@@ -85,6 +85,7 @@
 51) scale down `kubectl scale --replicas=0 replicaset.apps/<replicaset name>`
 52) Remove docker <none> images `docker rmi $(docker images -f "dangling=true" -q)`
 53) Delete namespace `kubectl delete namespace/<namespace name>`
+54) Port forward for prometheus analytics. `kubectl port-forward -n seldon-system svc/seldon-core-analytics-prometheus-seldon 9007:80`. Open `http://localhost:9007/`.
 
 
 ## Example Seldon Core Deployments using Helm with Istio
