@@ -108,6 +108,7 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/metrics.html
            https://docs.seldon.io/projects/seldon-core/en/latest/analytics/analytics.html
 1) [Metrics with prometheus Notebook](./metrics_prometheus.ipynb)
+2) [Stateful Model Feedback Metrics Server](./metrics-server.ipynb)
 
 ## Triton Examples
 1) open [triton_examples.ipynb](./triton_examples.ipynb)
@@ -145,7 +146,9 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/feedba
            https://docs.seldon.io/projects/seldon-core/en/latest/analytics/analytics.html
 1) [Metrics Server Notebook](./metrics-server.ipynb)
   
-##[Batch processing with Kubeflow Pipelines](https://docs.seldon.io/projects/seldon-core/en/latest/examples/kubeflow_pipelines_batch.html)
+## Batch processing with Argo Worfklows
+1) [Batch processing with Argo Worfklows](./argo_workflows_batch.ipynb)
+2) [Batch processing with Kubeflow Pipelines](https://docs.seldon.io/projects/seldon-core/en/latest/examples/kubeflow_pipelines_batch.html)
 
 ## Example Model Explanations with Seldon
 Reference: https://github.com/oegedijk/explainerdashboard/blob/master/notebooks/explainer_examples.ipynb
