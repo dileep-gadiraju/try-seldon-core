@@ -106,6 +106,7 @@ Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/server
 
 ## Metrics with Prometheus Operator
 Reference: https://docs.seldon.io/projects/seldon-core/en/latest/examples/metrics.html
+           https://docs.seldon.io/projects/seldon-core/en/latest/analytics/analytics.html
 1) [Metrics with prometheus Notebook](./metrics_prometheus.ipynb)
 
 ## Triton Examples
